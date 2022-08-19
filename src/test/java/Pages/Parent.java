@@ -18,7 +18,7 @@ public class Parent {
         element.sendKeys(value);
     }
     public void waitUntilVisible(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
     public void scrollToElement(WebElement element) {

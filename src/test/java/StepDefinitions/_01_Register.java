@@ -26,7 +26,7 @@ public class _01_Register {
         dc.findAndSend("customerAddressZipCode","34000");
         dc.findAndSend("customerPhoneNumber","+12345678989");
         dc.findAndSend("customerSsn","123");
-        dc.findAndSend("customerUsername","grup03");
+        dc.findAndSend("customerUsername","grup0003");
         dc.findAndSend("customerPassword","grup3123");
         dc.findAndSend("repeatedPassword","grup3123");
         dc.findAndClick("registerButton");

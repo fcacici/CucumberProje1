@@ -7,13 +7,17 @@ import io.cucumber.java.en.When;
 
 public class _03_Payment {
     DialogContent dc = new DialogContent();
-    @Then("User should login successfully")
-    public void userShouldLoginSuccessfully() {
-        dc.findAndSend("username","grup03");
+
+    @When("Enter valid username and password and click login")
+    public void enterValidUsernameAndPasswordAndClickLogin() {
+        dc.findAndSend("username","grup0003");
         dc.findAndSend("password","grup3123");
         dc.findAndClick("logInButton");
     }
-
+    @Then("User should login successfully")
+    public void userShouldLoginSuccessfully() {
+        dc.findAndContainsText("succesfullyLogin","welcome");
+    }
     @And("Click to Bill page")
     public void clickToBillPage() {
         dc.findAndClick("billPay");
@@ -26,6 +30,7 @@ public class _03_Payment {
         dc.findAndSend("payeeAddressCity","Toronto");
         dc.findAndSend("payeeAddressState","Canada");
         dc.findAndSend("payeeAddresszipCode","M4X1W7");
+        dc.findAndSend("payeePhoneNumber","+123456789");
         dc.findAndSend("payeeAccountNumber","12345678");
         dc.findAndSend("verifyAccount","12345678");
         dc.findAndSend("amount",amount);
@@ -36,4 +41,7 @@ public class _03_Payment {
     public void userShouldPaySuccessfully() {
         dc.findAndContainsText("billPaymentValid","complete");
     }
+
+
+
 }

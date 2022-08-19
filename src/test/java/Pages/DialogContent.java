@@ -72,10 +72,10 @@ public class DialogContent extends Parent{
     private WebElement errorMessage;
 
     /*
-    TODO SCENARIO 3
+    SCENARIO 3
     */
 
-    @FindBy(xpath = "(//*[text()='Bill Pay'])[1]")
+    @FindBy(css = "div[id=\"leftPanel\"] li:nth-of-type(4)")
     private WebElement billPay;
 
     @FindBy(name = "payee.name")
@@ -92,6 +92,9 @@ public class DialogContent extends Parent{
 
     @FindBy(name = "payee.address.zipCode")
     private WebElement payeeAddresszipCode;
+
+    @FindBy(name = "payee.phoneNumber")
+    private WebElement payeePhoneNumber;
 
     @FindBy(name = "payee.accountNumber")
     private WebElement payeeAccountNumber;
@@ -127,6 +130,15 @@ public class DialogContent extends Parent{
             case "username" : myElement =username; break;
             case "password" : myElement =password; break;
             case "payeeName" : myElement =payeeName; break;
+            case "payeeAddressStreet" : myElement =payeeAddressStreet; break;
+            case "payeeAddressCity" : myElement =payeeAddressCity; break;
+            case "payeeAddressState" : myElement =payeeAddressState; break;
+            case "payeeAddresszipCode" : myElement =payeeAddresszipCode; break;
+            case "payeePhoneNumber" : myElement =payeePhoneNumber; break;
+            case "payeeAccountNumber" : myElement =payeeAccountNumber; break;
+            case "verifyAccount" : myElement =verifyAccount; break;
+            case "amount" : myElement =amount; break;
+
         }
         sendKeysFunction(myElement, value);
     }
@@ -151,6 +163,9 @@ public class DialogContent extends Parent{
             case "successMessage" : myElement =successMessage; break;
             case "succesfullyLogin" : myElement =succesfullyLogin; break;
             case "errorMessage" : myElement =errorMessage; break;
+            case "billPaymentValid" : myElement =billPaymentValid; break;
+
+
         }
         verifyContainsText(myElement,text);
     }

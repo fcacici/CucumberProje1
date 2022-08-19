@@ -10,7 +10,7 @@ public class _02_Login {
     @When("Enter valid username and password and click login button")
     public void enterValidUsernameAndPasswordAndClickLoginButton() {
 
-        dc.findAndSend("username","grup03");
+        dc.findAndSend("username","grup0003");
         dc.findAndSend("password","grup3123");
         dc.findAndClick("logInButton");
 

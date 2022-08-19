@@ -12,5 +12,5 @@ Feature: Login Functionality
 
     Examples:
       | username  | password            |
-      | Yanlis    | grup3123            |
-      | grup03    | YANLISYANLISYANLIS  |
+      | YANLIS    | grup3123            |
+      | grup003    | YANLISYANLISYANLIS |
