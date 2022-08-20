@@ -1,16 +1,22 @@
 Feature: Login Functionality
 
+  Background:
+    Given Navigate to ParaBank
+
   Scenario: Login with valid username and password
-    Given Navigate to basqar
-    When Enter valid username and password and click login button
-    Then User should login successfully and logout
+    And Fill the Username as "Group3"
+    And Fill the Password as "grup3123"
+    When Click to Log in button
+    Then Verification of successfully logging in
+    When Click to Log out button
 
   Scenario Outline:
-    Given Navigate to basqar
-    When Enter unverified as "<username>" as "<password>" and click login button
+    And Fill the Username as "<username>"
+    And Fill the Password as "<password>"
+    When Click to Log in button
     Then User should see error message
 
     Examples:
       | username  | password            |
       | YANLIS    | grup3123            |
-      | grup003    | YANLISYANLISYANLIS |
+      | Group3 | YANLISYANLISYANLIS  |
